@@ -2,6 +2,9 @@
 fetch('./config.json')
     .then(config => config.json())
     .then(config => {
+        // This will store US election data
+        let resultStates;
+
         // Pull MapTiler API Key
         maptilersdk.config.apiKey = config.API_KEY;
 
